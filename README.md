@@ -1,1 +1,82 @@
 # Lab02
+'''
+Programador: José Manuel Venegas Vargas
+Laboratorio 2
+27/10/2022
+'''
+import traceback
+
+opcion=0
+while opcion !=6:
+    opcion = int(input("1- Pago por horas.\n\r"
+                           "2- Ingrese su nombre.\n\r"
+                           "3- Digite un número entero del 1 al 50.\n\r"
+                           "4- Confirmar si el número es primo o no.\n\r"
+                           "5- Conteo de A en un texto.\n\r"
+                           
+    if (opcion==1):
+        def hT ():
+            try:
+                horas: int(input("Total de horas: " ))
+                costo: int(input("Costo por hora: "))
+                total: horas*costo
+                print("La paga correspondiente es de: " + total)
+                
+            except BaseException:
+                print(traceback.format_exc())
+                
+        continue
+    if (opcion==2):
+        def nom():
+        nombre: input ("Ingrese su nombre: ")
+        print ("Bienvenido a la UIA " + nombre.upper())
+        print ("Bienvenido a la UIA " + nombre.lower())
+        
+        continue
+    if(opcion==3):
+        def ent():
+        try:
+            n_e= int(input("Digite un número entero: "))
+            if (n_e>=1 and n_e <=10):
+                print(pow(n_e,2))
+            elif(n_e>=11 and n_e <=20):
+                print(pow(n_e,4))
+            elif(n_e>=21 and n_e <=30):
+                print(pow(n_e,6))
+            elif(n_e>=31 and n_e <=40):
+                print(pow(n_e,8))
+            elif(n_e>=41 and n_e<=51):
+                print(pow(n_e,10))
+            else:
+                print(0)
+        except BaseException:
+            print(traceback.format_exc())
+        
+        continue
+    if(opcion==4):
+        def pri():
+        n : int(input("Ingrese un número: "))
+        y: 1
+        x: 0
+        
+        while(x<=n):
+            
+            if(n%x==0):
+                y=y+1
+            x=x+1
+        if (y==2):
+            print("El número: " + n + "es primo")
+            
+        else:
+            print("El número: " + n + "no es primo")
+        
+        continue
+    if(opcion==5):
+        def text():
+        txt: input("Ingrese el texto: ")
+        a="a"
+        txtac: txt.count(a)
+        print ("Hay" + txtac + "a en el texto: "  )
+        
+        continue
+    break
